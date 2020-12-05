@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --global-background: aliceblue;
+  --item-background: azure;
+  --no-items-color: lightslategray;
+  --text-color: black;
+}
+
+.header {
+  font-family: sans-serif;
+  padding: 8px;
+  padding-bottom: 16px;
+  background-color: var(--global-background);
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 8px;
+}
+
+.sidebar a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Provides current link styles */
+.active .sidebar-item {
+  background-color: var(--global-background);
+}
+
+.sidebar-item {
+  user-select: none;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.sidebar-item:hover {
+  background-color: var(--item-background);
+}
+
+.sidebar-labels {
+  margin-left: 40px;
+  text-align: left;
+}
+
+.page {
+  flex: 3;
+  padding: 8px;
+}
+
+.mail-list {
+  list-style-type: none;
+  margin-top: 16px;
+}
+
+.mail-item {
+  user-select: none;
+  padding: 8px;
+  border: 4px;
+  background-color: var(--item-background);
+  margin-bottom: 4px;
+}
+
+.no-items {
+  margin-top: 16px;
+  text-align: center;
+  border: 1px solid var(--no-items-color);
+  color: var(--no-items-color);
+  padding: 32px;
+  border-radius: 4px;
+}
